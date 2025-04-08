@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage('checkout'){
+            steps{
+                echo 'checkout code from git repository...'
+            }
+        }
+        stage('Build'){
+            steps{
+                echo 'building the repository code...'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo 'test the code....'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo 'deploy the code to the server'
+            }
+        }
+    }
+}
